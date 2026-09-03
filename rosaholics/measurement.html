@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tracking: qué está roto y qué falta — Rosaholics</title>
+<link rel="stylesheet" href="../style.css?v=f025d557">
+</head>
+<body>
+<header class="topbar"><nav><a class="brand" href="index.html"><img src="assets/logo.svg" alt="Rosaholics"></a><ul><li><a href="index.html">Resumen</a></li><li><a href="unit-economics.html">Economía</a></li><li><a href="tiktok-history.html">Lo que ya pasó</a></li><li><a href="competitor-research.html">Competencia</a></li><li><a href="creative-plan.html">Creativos</a></li><li><a href="campaign-structure.html">Campañas</a></li><li><a href="measurement.html" class="active">Medición</a></li><li><a href="exclusions.html">Exclusiones</a></li><li><a href="what-we-need.html">Qué necesitamos</a></li></ul></nav></header>
+<main>
+<article><h1 id="tracking-que-esta-roto-y-que-falta">Tracking: qué está roto y qué falta</h1>
+<h2 id="por-que-esta-pagina-importa-mas-que-la-de-campanas">Por qué esta página importa más que la de campañas</h2>
+<p>El 3 de septiembre comparamos lo que dice cada plataforma contra lo que registró Shopify.
+Agosto de 2026:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Inversión</th>
+<th>Dice que vendió</th>
+<th>Su ROAS</th>
+<th>Dice Shopify</th>
+<th>ROAS real</th>
+<th>Infla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Ads</td>
+<td>$29.808</td>
+<td>$144.688</td>
+<td>4,85x</td>
+<td>$84.800</td>
+<td>2,84x</td>
+<td><strong>1,7x</strong></td>
+</tr>
+<tr>
+<td>Meta</td>
+<td>$15.182</td>
+<td>$139.537</td>
+<td>9,19x</td>
+<td>$23.205</td>
+<td>1,53x</td>
+<td><strong>6,0x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Entre las dos se atribuyen <strong>$284.225 de un negocio que facturó $242.862</strong>. Eso es el <strong>117%
+de todo lo que vendió Rosaholics</strong>, y deja espacio negativo para orgánico, email, directo y
+recurrencia.</p>
+<p><strong>Meta sobreatribuye seis veces.</strong> Cualquier número de ROAS de TikTok hay que leerlo con eso
+en mente antes de tomar una decisión de presupuesto.</p>
+<p>Reparto real de agosto, según el UTM de último click de Shopify:</p>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Facturación</th>
+<th>Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google</td>
+<td>$84.800</td>
+<td>34,9%</td>
+</tr>
+<tr>
+<td>Directo o sin dato</td>
+<td>$82.917</td>
+<td>34,1%</td>
+</tr>
+<tr>
+<td>Email, Klaviyo</td>
+<td>$26.085</td>
+<td>10,7%</td>
+</tr>
+<tr>
+<td>Meta</td>
+<td>$23.205</td>
+<td>9,6%</td>
+</tr>
+<tr>
+<td>Afiliados, Awin</td>
+<td>$12.357</td>
+<td>5,1%</td>
+</tr>
+<tr>
+<td>Bing</td>
+<td>$2.320</td>
+<td>1,0%</td>
+</tr>
+</tbody>
+</table>
+<p>La lectura honesta es que el último click subestima lo pago aproximadamente tanto como las
+plataformas lo sobreestiman. Un tercio de la facturación cayendo en "directo" es en buena
+parte tráfico pago que perdió el UTM. <strong>La verdad está en el número combinado, no en ninguno
+de los dos extremos.</strong> El MER real de agosto fue <strong>5,40x</strong> sobre $44.990 de inversión.</p>
+<h2 id="por-que-los-numeros-de-tiktok-todavia-no-se-pudieron-verificar">Por qué los números de TikTok todavía no se pudieron verificar</h2>
+<p>Intentamos cruzar el histórico de TikTok contra dos fuentes independientes. <strong>Ninguna llega
+hasta ahí:</strong></p>
+<ul>
+<li><strong>Shopify</strong> solo devuelve pedidos desde el <strong>5 de julio de 2026</strong>. El permiso
+  <code>read_all_orders</code> no fue concedido, así que la API se corta a 60 días.</li>
+<li><strong>El reporte UTM de softwareholics</strong> tiene el calendario bloqueado antes de septiembre.</li>
+</ul>
+<p>O sea que el 6,72x de San Valentín y el 1,09x de marzo son ambos autoreportados por TikTok y
+<strong>ninguno está verificado</strong>. Si TikTok se comporta como Meta, los dos están inflados. Eso no
+cambia la conclusión de que marzo perdió plata: la empeora.</p>
+<p>Conseguir <code>read_all_orders</code> resuelve esto de forma permanente y es lo primero en
+<a href="what-we-need.html">Qué necesitamos</a>.</p>
+<h2 id="que-ya-esta-funcionando">Qué ya está funcionando</h2>
+<p><strong>El pixel de TikTok está instalado y disparando.</strong> ID <code>CH43L0RC77U3R61EFLNG</code>, cargado en el
+storefront. Las campañas históricas registraron 194 eventos de Complete Payment, así que el
+evento de compra funciona.</p>
+<p>También están vivos: GA4 <code>G-GR66YXHQ6E</code>, Google Ads <code>AW-828023370</code>, GTM <code>GTM-TDK25M6W</code>,
+Klaviyo, Pinterest y Bing.</p>
+<h2 id="que-falta-en-orden-de-costo">Qué falta, en orden de costo</h2>
+<h3 id="1-no-hay-respaldo-del-lado-del-servidor-para-el-pixel-de-tiktok">1. No hay respaldo del lado del servidor para el pixel de TikTok</h3>
+<p>El pixel de navegador solo pierde conversiones por las restricciones de iOS, bloqueadores y
+vencimiento de cookies. La pérdida de la industria ronda un tercio de las conversiones
+atribuibles, y en TikTok es peor que en Google porque la audiencia es más móvil y más iOS.</p>
+<p>Y no es solo un problema de reporte. <strong>TikTok puja con lo que puede ver.</strong> Cada compra que no
+vuelve es una señal de entrenamiento que el algoritmo nunca recibe, lo que significa peor
+targeting y un costo por compra más alto.</p>
+<p>La solución es la <strong>Events API de TikTok</strong>, y en Shopify es una configuración dentro de la
+app del canal de ventas, no un proyecto de desarrollo. Tiene que estar prendida antes del
+primer dólar.</p>
+<h3 id="2-faltan-los-utm-en-los-anuncios">2. Faltan los UTM en los anuncios</h3>
+<p>Para que la columna de ventas reales funcione, los UTM tienen que llegar. En cada anuncio de
+TikTok:</p>
+<pre><code>utm_source=tiktok&amp;utm_medium=cpc&amp;utm_campaign=__CAMPAIGN_ID__&amp;utm_content=__AID__&amp;utm_term=__CID__&amp;ttclid=__CLICKID__
+</code></pre>
+<p>Ya está construido el otro lado: <code>ops/ventas.py</code> trae los pedidos de Shopify y los reparte
+por UTM de último click. En cuanto TikTok gaste, el reporte diario va a traer una fila de
+TikTok con la facturación que Shopify registró de verdad, al lado de lo que TikTok dice.
+<strong>Se escala mirando la columna de Shopify.</strong></p>
+<h3 id="3-el-aviso-de-migracion-de-tags-de-google">3. El aviso de migración de tags de Google</h3>
+<p>Shopify muestra un banner rojo en la app de Google &amp; YouTube: <em>"Migrate your Google tags to
+prevent data loss."</em> Shopify está cambiando cómo funcionan los tags de Google y avisa que
+después de migrar hay que sacar los duplicados que estén puestos por otro lado, o los
+reportes van a quedar mal.</p>
+<p>Dado que Google ya sobreatribuye 1,7x, esto merece su propio trabajo antes de que empeore la
+medición.</p>
+<h3 id="4-cinco-conversiones-marcadas-como-primarias-en-google-ads-que-no-son-ventas">4. Cinco conversiones marcadas como primarias en Google Ads que no son ventas</h3>
+<p><code>Calls from Smart Campaign Ads</code>, <code>Smart campaign ad clicks to call</code>, <code>Clicks to call</code> y
+<code>Local actions - Directions</code> están todas configuradas como conversiones primarias. La única
+que corresponde es <code>Google Shopping App Purchase</code>. Si alguna dispara, corrompe el Smart
+Bidding.</p>
+<p>No es un tema de TikTok, pero es parte de por qué el número de Google no es confiable.</p>
+<h3 id="5-sin-acceso-al-pixel-ni-al-catalogo-de-tiktok-por-api">5. Sin acceso al pixel ni al catálogo de TikTok por API</h3>
+<p>Nuestro token devuelve <code>advertiser does not grant you /pixel/list/ permission</code>, y lo mismo
+para catálogo. Eso significa que no podemos verificar la salud del pixel, la calidad de los
+eventos ni la deduplicación de forma programática, ni construir Video Shopping Ads.</p>
+<p>Pedir esos permisos está en <a href="what-we-need.html">Qué necesitamos</a>.</p>
+<h2 id="el-reporte-que-ya-corre">El reporte que ya corre</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diario, 08:07</td>
+<td>Inversión, facturación real de Shopify por canal, MER, contribución, alertas y propuestas</td>
+</tr>
+<tr>
+<td>Semanal, lunes 08:22</td>
+<td>Tendencia contra la semana anterior, contribución por plataforma, ritmo contra presupuesto</td>
+</tr>
+</tbody>
+</table>
+<p>Las alertas comparan cada día contra el promedio móvil de siete días. El ROAS, la tasa de
+conversión y el costo por adquisición se evalúan con <strong>tres días de atraso</strong>, porque tanto
+Google como Meta siguen atribuyendo conversiones días después del cierre, y comparar el ayer
+contra datos maduros produce un derrumbe falso todas las mañanas.</p>
+<p>TikTok ya está cableado en los dos reportes. Muestra cero porque no hay inversión.</p>
+<h2 id="el-unico-numero-por-el-que-guiarse">El único número por el que guiarse</h2>
+<p>El ROAS por canal sirve para elegir entre campañas dentro de una plataforma. No sirve para
+decidir presupuesto entre plataformas, porque cada plataforma mide con una regla que fabricó
+ella misma.</p>
+<p><strong>Guiarse por MER y contribución.</strong> Facturación total de Shopify sobre inversión total, y
+gross profit menos inversión. Ninguno de los dos se puede inflar con un modelo de atribución.
+Los dos están en el reporte diario.</p></article>
+<footer>
+  <p>Rosaholics · preparado por Juan Benquet · última actualización 4 de septiembre de 2026</p>
+  <p class="conf">Confidencial. Preparado para Rosaholics, no para redistribuir.</p>
+</footer>
+</main>
+</body>
+</html>

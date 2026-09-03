@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Measurement Plan — Charter Jets Inc</title>
+<link rel="stylesheet" href="../style.css?v=f025d557">
+</head>
+<body>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html" class="active">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
+<main>
+<article><h1 id="measurement-plan">Measurement Plan</h1>
+<h2 id="starting-point-there-is-nothing">Starting point: there is nothing</h2>
+<p>Audit of the HTML served by the campaign landing page on August 31, 2026:</p>
+<pre><code>gtag                0 occurrences
+googletagmanager    0
+G-  / AW-           0
+dataLayer           0
+fbq                 0
+clarity / hotjar    0
+</code></pre>
+<p><strong>Zero tags.</strong> No GA4, no Google Ads, no tag manager, no pixel. The only analytics is
+Lovable's built-in counter, which cannot be used to optimise campaigns.</p>
+<p>At $10,000 a month with no measurement, the campaign optimises blind. <strong>This blocks launch.</strong></p>
+<h2 id="architecture">Architecture</h2>
+<pre><code>Landing page ──► dataLayer ──► GTM ──► GA4 ──► Google Ads (imported conversions)
+                                 └───► Google Ads (direct tag, enhanced conversions)
+CRM / sales team ─────────────────────► Google Ads (offline conversions, real value)
+</code></pre>
+<h2 id="events-the-landing-page-already-emits">Events the landing page already emits</h2>
+<p>The page is already instrumented. These fire today and are waiting for a container to
+receive them:</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Source</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generate_lead</code> (with <code>lead_source</code>)</td>
+<td>Landing page forms</td>
+<td>Primary form conversion</td>
+</tr>
+<tr>
+<td><code>avinode_search_one_way</code> / <code>_round_trip</code> / <code>_multi_city</code></td>
+<td>Search widget</td>
+<td>The visitor searched</td>
+</tr>
+<tr>
+<td><code>avinode_search_empty_leg</code></td>
+<td>Search widget</td>
+<td>Searched empty legs</td>
+</tr>
+<tr>
+<td><code>avinode_open_inquiry_form</code></td>
+<td>Search widget</td>
+<td>High intent</td>
+</tr>
+<tr>
+<td><code>avinode_send_inquiry</code> / <code>avinode_send_lead</code></td>
+<td>Search widget</td>
+<td><strong>Primary search conversion</strong></td>
+</tr>
+<tr>
+<td><code>avinode_change_airport</code> / <code>_date</code> / <code>_pax</code> / <code>_currency</code></td>
+<td>Search widget</td>
+<td>Abandonment diagnostics</td>
+</tr>
+</tbody>
+</table>
+<p>One thing worth understanding about the search widget: it is a <strong>cross-origin iframe</strong> served
+by Avinode. Google Ads and GA4 cannot see inside it. The only telemetry we get from the
+search is the bridge the landing page builds from Avinode's own tracking events into the
+data layer. If that bridge breaks in a future change, the entire search funnel goes dark
+without any error appearing.</p>
+<h2 id="conversions-to-create-in-google-ads">Conversions to create in Google Ads</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Source</th>
+<th>Type</th>
+<th>Counts toward bidding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Lead - Form</code></td>
+<td>GA4 <code>generate_lead</code>, or the <code>/thank-you</code> URL</td>
+<td>Primary</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>Lead - Avinode Inquiry</code></td>
+<td>GA4 <code>avinode_send_inquiry</code></td>
+<td>Primary</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>Call - Click to Call</code></td>
+<td>Click on a <code>tel:</code> link</td>
+<td>Secondary</td>
+<td>Not until call tracking exists</td>
+</tr>
+<tr>
+<td><code>Call - 60s+</code></td>
+<td>Call tracking</td>
+<td>Primary</td>
+<td>Yes, once it exists</td>
+</tr>
+<tr>
+<td><code>Search Started</code></td>
+<td><code>avinode_search_*</code></td>
+<td>Secondary</td>
+<td>No, observation only</td>
+</tr>
+<tr>
+<td><code>Qualified Lead</code></td>
+<td>Offline import from CRM</td>
+<td>Primary</td>
+<td>Phase 2</td>
+</tr>
+<tr>
+<td><code>Booked Flight</code> (with value)</td>
+<td>Offline import from CRM</td>
+<td>Primary</td>
+<td>Phase 2, and the one that matters</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Enhanced conversions for leads:</strong> the landing page already stores the Google click
+identifier (<code>gclid</code>, plus <code>gbraid</code>, <code>wbraid</code> and the Microsoft equivalent) and the campaign
+parameters against every lead it captures. That is precisely what is needed to upload
+offline conversions later. It is the piece that separates an account that scales from one
+that plateaus, and it is already built.</p>
+<h2 id="call-tracking-the-biggest-gap">Call tracking: the biggest gap</h2>
+<p>The phone button sits in the header and in the closing section of the landing page. In
+private charter, a significant share of the highest value leads will call rather than fill
+in a form. Today <strong>those calls are not attributed to any campaign or keyword.</strong></p>
+<p>Options, in order of preference:</p>
+<ol>
+<li><strong>Google Ads native call tracking</strong>, using forwarding numbers and call extensions. Free
+   and integrates by itself, but only covers calls originating from the ads.</li>
+<li><strong>CallRail or WhatConverts</strong>, with dynamic number insertion. Covers all traffic and
+   records calls, which additionally gives the sales team a way to score lead quality. The
+   cost is small relative to the media budget.</li>
+</ol>
+<p><strong>Our recommendation is option 2</strong>, because the same move also solves lead quality scoring,
+which is what feeds the offline conversion import in phase 2.</p>
+<p>One detail that affects either choice: the same phone number is published on
+<code>charterjetsinc.com</code> and on the campaign landing page. These are separate properties, so
+whatever is implemented has to cover both, or a share of calls stays invisible.</p>
+<h2 id="avinode-and-ga4">Avinode and GA4</h2>
+<p>The Avinode web app accepts a GA4 measurement ID directly in its own settings, along with an
+analytics referrer URL. <strong>Without the referrer set</strong>, traffic from the widget is attributed
+in GA4 as coming from <code>apps.avinode.com</code>, which breaks attribution for every search.</p>
+<p>Setting it regenerates the embed token, which means the landing page has to be updated at the
+same time. We will do this in one pass together with the GA4 setup rather than touching the
+page twice.</p>
+<h2 id="implementation-checklist">Implementation checklist</h2>
+<ul>
+<li>[ ] Create the GA4 property in the company's Google account</li>
+<li>[ ] Create the GTM container and load the ID into the landing page</li>
+<li>[ ] Publish, then <strong>verify every event above in real time</strong></li>
+<li>[ ] Link GA4 to Google Ads account 813-172-6321</li>
+<li>[ ] Create the conversion actions and set which ones count toward bidding</li>
+<li>[ ] Enable enhanced conversions for leads</li>
+<li>[ ] Load the GA4 ID and the analytics referrer into the Avinode web app</li>
+<li>[ ] Decide and implement call tracking</li>
+<li>[ ] Agree the offline conversion upload process with the sales team</li>
+<li>[ ] Install Microsoft Clarity for session recordings and heat maps</li>
+</ul>
+<h3 id="why-clarity-is-on-that-list">Why Clarity is on that list</h3>
+<p>At roughly 700 clicks a month, there is not enough traffic for statistically valid A/B
+testing. A two-armed test would take more than a year to resolve. Clarity is free, works at
+any traffic level, and answers the questions statistics cannot answer at this volume: does
+anyone scroll to the form at the bottom, do people click the aircraft category cards, do
+they leave while the search widget is still loading.</p>
+<p>For the first few months, that qualitative signal is worth more than a test we cannot power.</p>
+<h2 id="what-we-will-report">What we will report</h2>
+<h3 id="business-metrics-the-ones-that-matter">Business metrics, the ones that matter</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>How it is calculated</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per booked flight</td>
+<td>Spend divided by flights booked</td>
+<td>Depends on margin, pending your numbers</td>
+</tr>
+<tr>
+<td>Return on ad spend, on margin</td>
+<td>Gross margin divided by spend</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>Lead to quote rate</td>
+<td>Quotes divided by leads</td>
+<td>Baseline measured in the first 30 days</td>
+</tr>
+<tr>
+<td>Quote to flight rate</td>
+<td>Flights divided by quotes</td>
+<td>Same</td>
+</tr>
+</tbody>
+</table>
+<h3 id="media-metrics-optimised-daily">Media metrics, optimised daily</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost per lead, by path</td>
+<td>Cost divided by leads, separately for form, search inquiry and call</td>
+</tr>
+<tr>
+<td>Percentage of leads qualified</td>
+<td>Marked by your sales team, returned via offline conversions</td>
+</tr>
+<tr>
+<td>Cost per qualified lead</td>
+<td><strong>The real optimisation number</strong></td>
+</tr>
+<tr>
+<td>Search impression share</td>
+<td>The ceiling on growth in the keywords that convert</td>
+</tr>
+<tr>
+<td>Widget search rate</td>
+<td><code>avinode_search_*</code> divided by sessions, measures whether the search engages</td>
+</tr>
+<tr>
+<td>Inquiry rate</td>
+<td><code>avinode_send_inquiry</code> divided by searches, measures whether the results convince</td>
+</tr>
+</tbody>
+</table>
+<p>There are <strong>three conversion paths</strong> and all three have to be measured separately, because
+their quality and their cost are different:</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Where the lead ends up</th>
+<th>Expected quality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inquiry through the Avinode search</td>
+<td>Avinode, under Trips then Client Leads</td>
+<td>High, they have already seen pricing</td>
+</tr>
+<tr>
+<td>Landing page form</td>
+<td>Our lead table plus an email notification</td>
+<td>Medium, they have not seen pricing</td>
+</tr>
+<tr>
+<td>Phone call</td>
+<td>The charter desk</td>
+<td>The highest, and the worst measured today</td>
+</tr>
+</tbody>
+</table></article>
+<footer>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 2, 2026</p>
+  <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
+</footer>
+</main>
+</body>
+</html>

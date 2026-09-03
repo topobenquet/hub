@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Landing Page and Conversion — Charter Jets Inc</title>
+<link rel="stylesheet" href="../style.css?v=f025d557">
+</head>
+<body>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html" class="active">Landing & CRO</a></li><li><a href="measurement.html">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
+<main>
+<article><h1 id="landing-page-and-conversion">Landing Page and Conversion</h1>
+<p>The campaign landing page is a dedicated page built for paid search, separate from
+<code>charterjetsinc.com</code>. It carries the live Avinode search, first party lead capture with full
+campaign attribution, and the content needed to earn a good landing page experience score
+from Google.</p>
+<p>This document covers what it is, what we measured on it, and what we are changing.</p>
+<h2 id="why-a-dedicated-page-rather-than-the-main-site">Why a dedicated page rather than the main site</h2>
+<p>Quality Score has three components, each graded against every other advertiser who showed an
+ad for the same search over the last 90 days:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Driven by</th>
+<th>Does the landing page move it?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expected click through rate</td>
+<td>Ad copy, extensions, keyword history</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Ad relevance</td>
+<td>How closely the ad text matches the keyword</td>
+<td>Not directly, but the page reinforces it</td>
+</tr>
+<tr>
+<td><strong>Landing page experience</strong></td>
+<td>Relevance, usefulness, navigability, transparency, speed, mobile</td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A campaign page lets us match the message to the keyword exactly, put the live search above
+the fold, and capture the click identifier against every lead. The main site cannot do the
+last of those, and it is what makes offline conversion import possible later.</p>
+<h2 id="what-the-page-does-today">What the page does today</h2>
+<ul>
+<li><strong>Live aircraft and pricing search</strong>, powered by Avinode, above the fold</li>
+<li><strong>Lead capture</strong> that stores the Google click identifier and campaign parameters with every
+  submission, then redirects to a dedicated thank you page used as the conversion URL</li>
+<li><strong>Six aircraft categories</strong> with real exterior photography, from turboprop to ultra long
+  range</li>
+<li><strong>Popular routes</strong> out of Miami</li>
+<li><strong>Pricing transparency section</strong> explaining what actually drives a charter price</li>
+<li><strong>Miami departure airports</strong>, covering Opa-Locka, Miami International, Miami Executive and
+  Fort Lauderdale Executive</li>
+<li><strong>Eight FAQs</strong> with structured data, covering cost, lead time, airports, pets, luggage,
+  empty legs, the broker model and what is included</li>
+<li><strong>Broker disclosure</strong> and estimated pricing language throughout</li>
+</ul>
+<h2 id="what-we-measured">What we measured</h2>
+<p>Measured in production on September 2, on a 375 by 812 mobile viewport.</p>
+<p>Two things previously recorded as risks turned out to be fine, and are now closed:</p>
+<table>
+<thead>
+<tr>
+<th>Previously flagged</th>
+<th>Actual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The search widget might display prices in euros to a US audience</td>
+<td><strong>It displays USD.</strong> Closed</td>
+</tr>
+<tr>
+<td>The widget takes 8 to 12 seconds to render</td>
+<td><strong>It renders in 3.8 seconds</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The second measurement led to a more useful finding:</p>
+<pre><code>load event ......... 2,730 ms
+bootstrap starts ... 2,749 ms   &lt;- the widget only begins here
+iframe rendered .... 3,828 ms
+</code></pre>
+<p>The connection to Avinode was already pre-warmed, so network latency was not the constraint.
+The page was deliberately holding the widget back until after everything else finished
+loading, in order to protect a page speed score. For a paid traffic page where <strong>the search
+is the conversion</strong>, that is the wrong trade. We have changed it to start as soon as the
+page structure is ready.</p>
+<h2 id="changes-made">Changes made</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Change</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Search widget starts loading immediately</strong> rather than after everything else</td>
+<td>Recovers roughly 2.7 seconds of empty card at the exact point of conversion</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>The search card now has a heading</strong></td>
+<td>It was an unlabelled white box. A first time visitor from an ad had to work out what it was</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>All 10 aircraft and route cards now scroll to the search</strong>, not to the form at the bottom</td>
+<td>Someone clicking "Heavy Jet" or "Miami to Aspen" has declared their intent. Sending them to a blank six field form threw that away and asked them to retype it</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Trust signals moved above the search card</strong></td>
+<td>On mobile they previously sat below the fold, so the safety credentials were invisible at the moment of decision</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>A call to action for the phone sits directly under the search</strong></td>
+<td>The call is the highest value lead and it was represented only by a small button in the corner</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Six real exterior aircraft photographs</strong>, one per category, compressed to between 23 and 81 KB</td>
+<td>The previous set mixed interiors and exteriors and included a category that was not an aircraft type</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Testimonials replaced with real client messages</strong></td>
+<td>The page previously carried invented testimonials with fictional names and job titles. That is a genuine compliance exposure on a page receiving paid traffic</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Shorter subheadline</strong></td>
+<td>Frees vertical space above the fold on mobile</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>New "Why this is different" section</strong></td>
+<td>Your closest competitor claims an "industry leading quoting tool" in every ad. Ours is genuinely stronger and the page never said so</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>New About section</strong>, with accreditations</td>
+<td>The page carried no company story and no credentials at all</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Every internal link now scrolls to the search</strong> instead of opening a separate page</td>
+<td>Keeps the visitor on one page and on one conversion path</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Search button added to the closing section</strong>, alongside the callback form</td>
+<td>Gives the two conversion paths equal weight at the bottom of the page</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-still-needs-a-decision">What still needs a decision</h2>
+<p>These are outside our control and each one costs conversions until it is closed.</p>
+<h3 id="1-the-avinode-commission-is-set-to-0">1. The Avinode commission is set to 0%</h3>
+<p>At 0%, the prices a visitor sees in the search are <strong>wholesale operator pricing</strong>. When a
+specialist follows up with a real quote including your markup, the number will be higher
+than what the visitor was shown.</p>
+<p>That happens at the worst possible moment in the funnel, when the lead is warm and trust is
+everything. This is a configuration setting, not a page problem, and it is <strong>the largest
+revenue risk currently on the page.</strong></p>
+<h3 id="2-the-domain">2. The domain</h3>
+<p>The page runs on a subdomain we own rather than one you own. A buyer about to share their
+phone number for a five figure decision lands on a domain that does not match the logo at
+the top of the page. That is a conversion problem as much as an operational one, and it also
+costs Quality Score.</p>
+<h3 id="3-the-departure-field-starts-empty">3. The departure field starts empty</h3>
+<p>The search widget opens with an empty "From" field, on a page titled <em>Private Jet Rentals in
+Miami</em>, receiving traffic from ads targeted at Miami. Pre-filling Miami removes a step. This
+requires a change on Avinode's side.</p>
+<h3 id="4-empty-legs-is-a-top-level-tab-in-the-search">4. Empty legs is a top level tab in the search</h3>
+<p>Empty leg hunters generate a high volume of clicks and close at the lowest rate of any
+segment. Right now the paid landing page invites them in through the front door. Our
+recommendation is to remove that tab from this page and give empty legs its own campaign and
+its own page, which is planned for month 2 of the <a href="roadmap.html">roadmap</a>.</p>
+<h3 id="5-trust-signals-partly-closed-one-gap-left">5. Trust signals: partly closed, one gap left</h3>
+<p>Now on the page: the About section with the company story, <strong>ARG/US Registered Broker</strong>
+(rated since 2022) and <strong>NBAA membership</strong>.</p>
+<p>The ARG/US Registered Broker rating is the strongest credential you have and it was nowhere
+on the site. It matters because it is <strong>yours</strong>, not the operators'. ARG/US and Wyvern safety
+ratings belong to the carriers; Registered Broker is Charter Jets Inc.</p>
+<p><strong>Two logos we deliberately left off, and why.</strong> The FAA seal and the IS-BAO mark both appear
+on the corporate site. On a paid landing page they are a policy risk. Charter Jets is a
+broker: it is not certificated by the FAA, and IS-BAO is a standard for flight operations
+departments, not brokers. Displaying either in an accreditations strip implies a credential
+the company does not hold, which is exactly the kind of thing Google's misrepresentation
+policy targets, in an account that already carries one misrepresentation flag from the
+<code>Over 100 Years Experience</code> headline. The accurate version is on the page as text: every
+flight is operated by an FAA Part 135 certified air carrier, selected using ARG/US and Wyvern
+safety ratings.</p>
+<p><strong>The gap that remains is reviews.</strong> Your closest competitor puts "1,000+ Trustpilot 5 star
+reviews" in every single ad, and that is the most persuasive thing in the auction. Charter
+Jets has a Trustpilot profile but the review count is currently too low to display, so we
+have deliberately left it off the page rather than show a weak number.</p>
+<p>That makes <strong>building the review base a business project that should start now</strong>, not a
+campaign task. It takes months, and until it exists we keep losing auctions on it. The
+cheapest version is asking every completed trip for a review as part of the existing
+post-flight follow up.</p>
+<h3 id="6-the-form-at-the-bottom-asks-for-six-required-fields">6. The form at the bottom asks for six required fields</h3>
+<p>Origin, destination, date, name, phone and passenger count. For someone who has already used
+the search at the top, it asks for everything again. For someone who simply wants a call
+back, it is three times more than necessary. We recommend cutting it to name, phone and
+optional email.</p>
+<h2 id="a-note-on-testing">A note on testing</h2>
+<p>At roughly 700 clicks and 20 to 35 leads a month, <strong>there is not enough traffic to run
+valid A/B tests.</strong> A properly powered two-armed test needs hundreds of conversions per arm,
+which at this volume would take more than a year to accumulate.</p>
+<p>That has a practical consequence worth being explicit about: <strong>what is clearly broken gets
+fixed, not tested.</strong> The changes listed above were made on that basis. Formal testing enters
+the picture if and when spend increases substantially.</p>
+<p>In the meantime, Microsoft Clarity gives session recordings and heat maps at any traffic
+level, for free, and answers the questions statistics cannot answer here. It is on the
+<a href="measurement.html">measurement</a> checklist.</p>
+<h2 id="the-faq-is-the-strongest-part-of-the-page">The FAQ is the strongest part of the page</h2>
+<p>Worth saying, because it is unusual. The eight questions cover the real objections, they are
+specific rather than generic, and they carry structured data so they are eligible to appear
+directly in search results.</p>
+<p>The one objection the page does not yet answer is <strong>what happens if a client needs to change
+or cancel a flight</strong>. That is in <a href="what-we-need.html">what we need</a>, because only you can
+answer it.</p></article>
+<footer>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 2, 2026</p>
+  <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
+</footer>
+</main>
+</body>
+</html>

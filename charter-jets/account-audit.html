@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Google Ads Account Audit — Charter Jets Inc</title>
+<link rel="stylesheet" href="../style.css?v=f025d557">
+</head>
+<body>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html" class="active">Account Audit</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
+<main>
+<article><h1 id="google-ads-account-audit">Google Ads Account Audit</h1>
+<p><strong>Account:</strong> 813-172-6321 · USD · America/New_York · auto-tagging on
+<strong>Date:</strong> August 31, 2026 · <strong>Source:</strong> Google Ads API v23, full account history
+<strong>Total historical spend:</strong> <strong>$4,030.71</strong> across 7 campaigns, 682 keywords and 1,870 search terms</p>
+<blockquote>
+<p>Conversion tracking in this account is not reliable, for the reason set out in finding 1.
+Every quality judgement below is therefore made on search term relevance, cost per click,
+click through rate and measurable waste, not on reported conversions.</p>
+</blockquote>
+<h2 id="summary-where-the-money-went">Summary: where the money went</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historical spend</td>
+<td>$4,030.71</td>
+</tr>
+<tr>
+<td>Clicks</td>
+<td>4,036</td>
+</tr>
+<tr>
+<td>Average cost per click</td>
+<td>$1.00</td>
+</tr>
+<tr>
+<td><strong>Waste identified by relevance</strong></td>
+<td><strong>$651 of the $1,481 attributable to terms, or 44%</strong></td>
+</tr>
+<tr>
+<td>Average search impression share</td>
+<td>10% to 35%</td>
+</tr>
+</tbody>
+</table>
+<p>An average cost per click of <strong>$1.00 in private jet charter is the loudest signal in this
+audit.</strong> Real cost per click in this vertical in the US runs between $8 and $25 on the
+keywords that actually produce bookings. Paying a dollar means the ads were winning auctions
+nobody else wanted: price researchers, people shopping to buy an aircraft, and low cost
+semi-private seats.</p>
+<h2 id="finding-1-conversion-tracking-counted-clicks-inside-a-search-widget">Finding 1: conversion tracking counted clicks inside a search widget</h2>
+<p>Of the 17 conversion actions in the account, these are marked <strong>primary and counted toward
+bidding</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Conversion action</th>
+<th>Category</th>
+<th>Historical conversions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Search One Way</code></td>
+<td>Begin checkout</td>
+<td><strong>996</strong></td>
+</tr>
+<tr>
+<td><code>Search Round Trip</code></td>
+<td>Begin checkout</td>
+<td><strong>724</strong></td>
+</tr>
+<tr>
+<td><code>Open inquiry form</code></td>
+<td>Begin checkout</td>
+<td><strong>242</strong></td>
+</tr>
+<tr>
+<td><code>Change startAirport</code></td>
+<td>Default</td>
+<td>12 (1,177 in all conversions)</td>
+</tr>
+<tr>
+<td><code>Inquiry sent</code></td>
+<td>Request quote</td>
+<td><strong>3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>These are events from the Avinode web app already embedded on <code>charterjetsinc.com</code>:
+searching a leg, opening a form, and <strong>changing the departure airport</strong>. None of them is a
+lead. <code>Close inquiry form</code>, meaning a visitor closing the form, is also registered as a
+conversion.</p>
+<p><strong>Of roughly 1,974 counted conversions, 3 were real quote requests.</strong> That is 0.15%.</p>
+<p>This explains the impossible ratios in the history:</p>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Clicks</th>
+<th>"Conversions"</th>
+<th>Reported conversion rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search_GA</td>
+<td>42</td>
+<td>85</td>
+<td><strong>202%</strong></td>
+</tr>
+<tr>
+<td>Pricing-Search</td>
+<td>83</td>
+<td>94</td>
+<td><strong>113%</strong></td>
+</tr>
+<tr>
+<td>Search_CA</td>
+<td>485</td>
+<td>451</td>
+<td>93%</td>
+</tr>
+<tr>
+<td>Search_SFL</td>
+<td>501</td>
+<td>468</td>
+<td>93%</td>
+</tr>
+</tbody>
+</table>
+<p>All four search campaigns run on Maximise Conversions. For months, automated bidding was
+buying, with real precision, the person who plays with the search widget and leaves. Google
+did exactly what it was asked to do.</p>
+<p><code>YouTube follow-on views</code> is also marked primary, in a search-only account.</p>
+<h2 id="finding-2-geographic-targeting-is-open-to-the-world">Finding 2: geographic targeting is open to the world</h2>
+<p><strong>All 7 campaigns use <code>Presence or interest</code></strong> as their location targeting type.</p>
+<p>That means the New York campaign shows ads to anyone <strong>on the planet</strong> who displays an
+interest in New York. Someone in Manila searching "private jet new york" enters the auction
+and can click. It is the most common and most expensive geographic leak in Google Ads, and
+it is active across the whole account.</p>
+<p>The targeting is also inconsistent between campaigns:</p>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Actual targeting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search_NYC</td>
+<td><strong>New York City only.</strong> Excludes Teterboro, Westchester, Long Island and the Hamptons, which is where the charter client actually is</td>
+</tr>
+<tr>
+<td>Search_SFL</td>
+<td>4 Florida metro areas (Miami, Tampa, West Palm, Ft. Myers)</td>
+</tr>
+<tr>
+<td>Search_CA</td>
+<td>All of California</td>
+</tr>
+<tr>
+<td>Search_GA</td>
+<td>All of Georgia</td>
+</tr>
+</tbody>
+</table>
+<p>The account restricts where it should open up, and opens to the world where it should
+restrict.</p>
+<h2 id="finding-3-44-of-spend-went-to-intent-that-does-not-buy">Finding 3: 44% of spend went to intent that does not buy</h2>
+<p>Classification of the 1,870 real search terms, covering the $1,481 attributable to specific
+terms:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Cost</th>
+<th>%</th>
+<th>Clicks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Price curiosity</strong> ("how much is it to rent a private jet")</td>
+<td><strong>$396.26</strong></td>
+<td><strong>26.8%</strong></td>
+<td>383</td>
+</tr>
+<tr>
+<td>Aircraft sales and ownership ("private jet for sale")</td>
+<td>$54.87</td>
+<td>3.7%</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Empty legs</td>
+<td>$53.05</td>
+<td>3.6%</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Fractional, jet card, membership (Flexjet, Wheels Up)</td>
+<td>$47.59</td>
+<td>3.2%</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Aircraft makes and models (Gulfstream, Phenom, Cirrus)</td>
+<td>$33.43</td>
+<td>2.3%</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Semi-private and low cost (JSX, "semi private flights")</td>
+<td>$32.89</td>
+<td>2.2%</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Competitors</td>
+<td>$29.90</td>
+<td>2.0%</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Educational and general curiosity</td>
+<td>$3.21</td>
+<td>0.2%</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Total non-buying</strong></td>
+<td><strong>$651.20</strong></td>
+<td><strong>44.0%</strong></td>
+<td>449</td>
+</tr>
+</tbody>
+</table>
+<p>The three most expensive terms in the entire account:</p>
+<table>
+<thead>
+<tr>
+<th>Search term</th>
+<th>Cost</th>
+<th>Clicks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>how much is it to rent a private jet</code></td>
+<td>$129.66</td>
+<td>139</td>
+</tr>
+<tr>
+<td><code>private jet from dc to miami</code></td>
+<td>$114.05</td>
+<td>99</td>
+</tr>
+<tr>
+<td><code>how much is it to rent a jet</code></td>
+<td>$95.91</td>
+<td>96</td>
+</tr>
+</tbody>
+</table>
+<p>Two of the three are pure curiosity. <strong>The middle one is the best search term in the
+account</strong> and there is no campaign built to serve it.</p>
+<p>Other terms the account actually paid for: <code>private jet birthday party</code>, <code>private jet for
+sale</code>, <code>vision jet cost</code>, <code>cirrus jet price</code>, <code>semi private flights with dogs</code>, <code>vuelos
+charter a cuba</code>, <code>air taxi egypt</code>, <code>charter plane rent in india</code>, <code>who makes corporate
+jets</code>.</p>
+<h2 id="finding-4-there-are-713-negatives-and-all-of-the-above-still-happened">Finding 4: there are 713 negatives, and all of the above still happened</h2>
+<p>The account holds 713 unique negative keywords: one shared list of 58, 299 at campaign level
+(284 of them on the paused Performance Max campaign) and 435 at ad group level.</p>
+<p>The problem is not volume, it is criteria. Almost all of them are <strong>brand and model names</strong>
+(Gulfstream G650, Phenom 300, Wheels Up, Flexjet, Amalfi Jets). There are almost no
+<strong>intent</strong> negatives, and intent is where 27% of the waste comes from.</p>
+<p>Two specific issues:</p>
+<ol>
+<li><strong><code>Search_GA</code> does not have the shared list applied at all.</strong> It is the campaign with the
+   highest cost per click in the account at $5.36, running without any of the 58 shared
+   negatives.</li>
+<li>Single word broad negatives (<code>cheap</code>, <code>affordable</code>, <code>cheapest</code>) sit alongside
+   hyper-specific exact negatives (<code>bajit complimentary flight</code>). This is a list that grew
+   by patching rather than by design.</li>
+</ol>
+<h2 id="finding-5-campaign-and-ad-group-structure">Finding 5: campaign and ad group structure</h2>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Status</th>
+<th>Spend</th>
+<th>Budget</th>
+<th>Bidding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pmax</td>
+<td>Paused</td>
+<td>$782.43</td>
+<td>$65/day</td>
+<td>Maximise conv</td>
+</tr>
+<tr>
+<td>Search_CA</td>
+<td>Enabled</td>
+<td>$1,033.59</td>
+<td>$75/day</td>
+<td>Maximise conv</td>
+</tr>
+<tr>
+<td>Search_SFL</td>
+<td>Enabled</td>
+<td>$922.80</td>
+<td>$75/day</td>
+<td>Maximise conv</td>
+</tr>
+<tr>
+<td>Search_NYC</td>
+<td>Enabled</td>
+<td>$924.20</td>
+<td>$75/day</td>
+<td>Maximise conv</td>
+</tr>
+<tr>
+<td>Display_Retargeting</td>
+<td>Paused</td>
+<td>$77.69</td>
+<td>$15/day</td>
+<td>Manual CPM</td>
+</tr>
+<tr>
+<td>Pricing-Search</td>
+<td>Paused</td>
+<td>$65.00</td>
+<td>$35/day</td>
+<td>Maximise conv</td>
+</tr>
+<tr>
+<td>Search_GA</td>
+<td>Enabled</td>
+<td>$225.00</td>
+<td>$75/day</td>
+<td>Maximise conv</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><code>Search_GA</code> contains an ad group called <code>Pricing_CA</code></strong> with 24 keywords. The California
+  ad group was copied inside the Georgia campaign, so Georgia ads serve keywords written for
+  California.</li>
+<li><strong>Ad groups have no focus.</strong> <code>Charter_NYC</code> holds <strong>396 keywords in a single ad group</strong>.
+  With 396 keywords there is no way for one ad to be relevant to any of them.</li>
+<li><strong>81 keywords are duplicated</strong> across ad groups. <code>private jet rental cost</code> sits in 8
+  different ad groups, where they compete against each other in the auction and fragment the
+  performance history.</li>
+<li><strong>Match types:</strong> 483 exact, 181 phrase, 18 broad. The proportion is reasonable, but 590
+  keywords have <strong>no quality score data at all</strong>, meaning they have never served.</li>
+<li><strong><code>Search_GA</code> has Display expansion switched on</strong> inside a search campaign.</li>
+<li><code>Display_Retargeting</code> spent $77.69 for 99,499 impressions and <strong>57 clicks</strong>, a click
+  through rate of 0.06%.</li>
+</ul>
+<h2 id="finding-6-the-ads">Finding 6: the ads</h2>
+<ul>
+<li><strong>One ad per ad group.</strong> With no variant, no test is possible.</li>
+<li><strong>Half the responsive search ads have 10 headlines instead of 15</strong>, giving away
+  combination inventory for free.</li>
+<li><strong>The same ad runs identically in Florida, New York, California and Georgia.</strong> Zero
+  localisation in a product where the departure airport is the selling point.</li>
+<li><strong>Every ad points at <code>charterjetsinc.com/</code></strong>, the homepage. None points at the matching
+  city page, even though the site <strong>already has destination pages</strong>
+  (<code>/destination/miami-private-jet-charters/</code>, <code>/destination/teterboro-...</code>, and more).</li>
+<li>A dynamic keyword insertion headline, <code>{KeyWord:Private Jet Charter}</code>, sits in position 1.
+  With 396 keywords in the ad group, that inserts anything.</li>
+<li><strong>Policy risk:</strong> the headline <code>Over 100 Years Experience</code>, where the description clarifies
+  <em>"combined over a 100 years of experience"</em>. On its own the headline claims the company is
+  more than 100 years old. That is misrepresentation, and it is avoidable.</li>
+</ul>
+<h2 id="finding-7-assets-and-extensions">Finding 7: assets and extensions</h2>
+<p>Present: 8 sitelinks, 4 callouts, a call extension, and images.</p>
+<p>Missing:</p>
+<ul>
+<li><strong>Structured snippets</strong> for aircraft categories (Light, Midsize, Super Midsize, Heavy,
+  Ultra Long Range, Turboprop). The most natural asset this business could have, and it does
+  not exist.</li>
+<li><strong>Price extension</strong> and <strong>location extension</strong>.</li>
+<li>Sitelinks are generic and shared across all campaigns. None points to <code>/empty-legs/</code>,
+  <code>/safety/</code> or any destination page.</li>
+<li>Image assets are named things like <code>Generated image - 2026-08-29 19:28:26_1.199</code>, with
+  several duplicate versions of the same file. Nobody curated them.</li>
+</ul>
+<h2 id="finding-8-devices-and-cost-per-click">Finding 8: devices and cost per click</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Impressions</th>
+<th>Clicks</th>
+<th>Cost</th>
+<th>CPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mobile</td>
+<td>155,008</td>
+<td>3,548</td>
+<td>$3,384.16</td>
+<td><strong>$0.95</strong></td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td>33,090</td>
+<td>201</td>
+<td>$559.84</td>
+<td>$2.79</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>20,459</td>
+<td>287</td>
+<td>$89.96</td>
+<td>$0.31</td>
+</tr>
+</tbody>
+</table>
+<p><strong>84% of spend went to mobile at $0.95 a click.</strong> On a high value product that is not a
+bargain. It confirms that the campaign bought the cheapest and lowest intent inventory it
+could find, pushed there by the broken conversion goal in finding 1.</p>
+<p>We do not recommend touching device adjustments yet. Once keywords, negatives and geography
+are fixed, the mobile profile will change completely. Measure it then.</p>
+<h2 id="finding-9-impression-share">Finding 9: impression share</h2>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Impression share</th>
+<th>Lost to budget</th>
+<th>Lost to rank</th>
+<th>CPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search_CA</td>
+<td>10.0%</td>
+<td><strong>88.7%</strong></td>
+<td>4.5%</td>
+<td>$2.13</td>
+</tr>
+<tr>
+<td>Search_SFL</td>
+<td>17.6%</td>
+<td>50.8%</td>
+<td>31.6%</td>
+<td>$1.84</td>
+</tr>
+<tr>
+<td>Search_NYC</td>
+<td>17.2%</td>
+<td>31.8%</td>
+<td><strong>50.9%</strong></td>
+<td>$1.65</td>
+</tr>
+<tr>
+<td>Search_GA</td>
+<td>35.1%</td>
+<td>44.4%</td>
+<td>20.5%</td>
+<td>$5.36</td>
+</tr>
+</tbody>
+</table>
+<p>Search_CA loses 88.7% of impression share to budget. The easy reading is "raise the budget".
+<strong>The correct reading is that raising the budget on this structure buys more of the same.</strong>
+Fix what is being bought first, then how much.</p>
+<p>Search_NYC loses 50.9% to ad rank, which is a genuine relevance and quality score problem,
+and a direct consequence of 396 keywords in one ad group served by one generic ad.</p>
+<h2 id="finding-10-the-landing-page">Finding 10: the landing page</h2>
+<p>Every ad points at <code>charterjetsinc.com/</code>. In parallel a new campaign landing page exists,
+with the Avinode search embedded and lead capture built.</p>
+<p>Two notes. The new page currently lives on our domain rather than yours, and should move to
+a subdomain of <code>charterjetsinc.com</code> before receiving paid traffic. And
+<code>charterjetsinc.com</code> already has the Avinode web app and GA4 connected, which is where the
+events in finding 1 originate. The measurement infrastructure exists; it is misconfigured on
+the Google Ads side, not on the website side.</p>
+<h2 id="verdict">Verdict</h2>
+<p>This account does not have an optimisation problem. It has a foundations problem. In order
+of cost:</p>
+<ol>
+<li><strong>It optimised toward a false conversion</strong> for its entire history.</li>
+<li><strong>Geographic targeting was open to the world</strong> in all 7 campaigns.</li>
+<li><strong>44% of spend went to intent that does not buy</strong>, and the existing negatives were not
+   built to stop it.</li>
+</ol>
+<p>Everything else, oversized ad groups, one ad per group, no structured snippets, no
+localisation, is correctable in an afternoon. The three above are the reason $4,030 produced
+3 real quote requests.</p>
+<p>What we do about it is in the <a href="roadmap.html">roadmap</a>.</p></article>
+<footer>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 2, 2026</p>
+  <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
+</footer>
+</main>
+</body>
+</html>
