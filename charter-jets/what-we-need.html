@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../style.css?v=f025d557">
 </head>
 <body>
-<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html">Measurement</a></li><li><a href="what-we-need.html" class="active">What We Need</a></li></ul></nav></header>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="account-history.html">Account History</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html">Measurement</a></li><li><a href="what-we-need.html" class="active">What We Need</a></li></ul></nav></header>
 <main>
 <article><h1 id="open-items-and-access">Open Items and Access</h1>
 <p>Ordered by how much each one blocks. Nothing here is administrative housekeeping. Each item
@@ -46,19 +46,28 @@ overhead, it is tighter.</p>
 broker. Moving to 15% would drop the close rate needed to break even from 17.5% to 11.7%.
 Nothing available to us inside Google Ads comes close to that effect. If the 10% is set by
 competitive pressure rather than policy, it is worth a conversation.</p>
-<h2 id="2-google-ads-account-access">2. Google Ads account access</h2>
-<p>Administrator access to account <strong>813-172-6321</strong>, or acceptance of the access request from
-our manager account.</p>
-<p>Needed to load the rebuilt campaign structure, fix the conversion actions and correct the
-geographic targeting. The audit was completed through read access; the rebuild cannot be.</p>
-<h2 id="3-google-analytics-and-tag-manager">3. Google Analytics and Tag Manager</h2>
+<h2 id="2-godaddy-so-we-can-point-lpcharterjetsinccom-at-the-landing-page">2. GoDaddy, so we can point <code>lp.charterjetsinc.com</code> at the landing page</h2>
+<p>This moved to the top of the list after the account audit.</p>
+<p>Every ad in account 645-044-1013 pointed at <code>lp.charterjetsinc.com</code>. That subdomain is still
+yours, still in DNS, and currently serving a 500 error behind an expired certificate. It cost
+$12,133 in wasted spend before the campaigns were paused.</p>
+<p>We do not need a new domain. We need DNS access to point that existing subdomain at the new
+landing page. That also closes the separate problem that the page currently runs on our
+domain rather than yours.</p>
+<h2 id="3-google-ads-account-access">3. Google Ads account access</h2>
+<p>Administrator access to <strong>645-044-1013</strong>, which is the account we will build in, or
+acceptance of the access request from our manager account.</p>
+<p>We also still want access to <strong>813-172-6321</strong> to formally pause and archive it, so that two
+accounts are not competing in the same auctions.</p>
+<p>The audits were completed through read access; the rebuild cannot be.</p>
+<h2 id="4-google-analytics-and-tag-manager">4. Google Analytics and Tag Manager</h2>
 <p>Administrator access to the company's Google account so we can create the GA4 property and
 the Tag Manager container, or have them created and sent to us as:</p>
 <pre><code>GA4 measurement ID    G-XXXXXXXXXX
 GTM container ID      GTM-XXXXXXX
 </code></pre>
 <p>Without these the campaign optimises blind. See the <a href="measurement.html">measurement plan</a>.</p>
-<h2 id="4-where-the-leads-go-and-how-fast">4. Where the leads go, and how fast</h2>
+<h2 id="5-where-the-leads-go-and-how-fast">5. Where the leads go, and how fast</h2>
 <p>Three questions:</p>
 <ul>
 <li>Who receives an inbound lead, and during what hours?</li>
@@ -69,24 +78,24 @@ GTM container ID      GTM-XXXXXXX
 minutes</strong>. That promise needs to be one the sales side can actually keep. In charter, speed
 of response moves the close rate more than almost anything we can do inside the ad account,
 and it also determines the ad scheduling we recommend.</p>
-<h2 id="5-call-tracking">5. Call tracking</h2>
+<h2 id="6-call-tracking">6. Call tracking</h2>
 <p>Your game plan is built around the phone call from month 6 onward, with a target of under
 $150 per call. Today, <strong>no inbound call is attributable to any campaign or keyword</strong>, so
 that target cannot be measured.</p>
-<p>The unit economics moved this from important to non-negotiable. If calls close at 20% while
-form fills close at 5%, then optimising the account toward form fills <strong>actively destroys
-value</strong>. We cannot know which is happening without measuring it.</p>
+<p>The account audit made this sharper. In 645-044-1013 the call extension was shown 7,478 times
+and produced <strong>8 calls</strong>. Either this buyer genuinely does not call from the ad, in which case
+the call-centric half of your game plan needs rethinking, or the calls happened from the
+website and were never counted, in which case the measured 0.66% inquiry rate understates
+real leads and call tracking is worth even more. We cannot tell those apart without
+instrumenting it.</p>
 <p>We need a decision on approach, and the account if you already have one. The options and
 the recommendation are in the <a href="measurement.html">measurement plan</a>. One detail worth
 flagging: the same phone number appears on <code>charterjetsinc.com</code> and on the campaign landing
 page, so whatever we implement has to cover both.</p>
-<h2 id="6-domain">6. Domain</h2>
-<p>The campaign landing page currently runs on a subdomain owned by us, not by Charter Jets.
-Before it receives paid traffic it should move to a subdomain of <code>charterjetsinc.com</code>, for
-example <code>fly.charterjetsinc.com</code>.</p>
-<p>Two reasons. A visitor about to share their phone number for a five figure decision should
-land on your domain, not an unfamiliar one. And the asset should belong to you.</p>
-<p>We need DNS access, or someone on your side who can add a record.</p>
+<h2 id="7-aircraft-category-starting-prices">7. Aircraft category starting prices</h2>
+<p>Only if they are numbers you can stand behind. A "from $X" that does not hold up is both a
+policy risk with Google and a problem on the call. Until they are firm, we leave that ad
+extension off.</p>
 <h2 id="7-avinode-configuration-done">7. Avinode configuration: done</h2>
 <table>
 <thead>
@@ -146,7 +155,7 @@ a draft of the request ready to send.</p>
   call. Until they are firm, we leave that ad extension off.</li>
 </ul></article>
 <footer>
-  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 2, 2026</p>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 3, 2026</p>
   <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
 </footer>
 </main>

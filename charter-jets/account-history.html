@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Account History and Real Benchmarks — Charter Jets Inc</title>
+<link rel="stylesheet" href="../style.css?v=f025d557">
+</head>
+<body>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="account-history.html" class="active">Account History</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
+<main>
+<article><h1 id="account-history-and-real-benchmarks">Account History and Real Benchmarks</h1>
+<p>There are two Google Ads accounts. This document is about <strong>645-044-1013</strong>, the one we will
+build in, and it is the most useful thing we have found so far, because it gives us real
+numbers from this business instead of industry estimates.</p>
+<p><strong>Account:</strong> 645-044-1013, "Charter Jets, Inc.", USD, America/New York, auto-tagging on
+<strong>Spend:</strong> <strong>$67,621</strong> across 10,000 clicks and 50 recorded inquiries
+<strong>Status:</strong> everything is paused today
+<strong>Source:</strong> Google Ads API, full account history, pulled September 3, 2026</p>
+<h2 id="the-first-thing-we-found-12133-spent-on-a-dead-landing-page">The first thing we found: $12,133 spent on a dead landing page</h2>
+<p>Every search ad in this account points at <code>lp.charterjetsinc.com</code>. That subdomain is broken:</p>
+<pre><code>https://lp.charterjetsinc.com/   -&gt;  SSL certificate has expired
+http://lp.charterjetsinc.com/private-jet-charters/   -&gt;  500 Internal Server Error
+</code></pre>
+<p>The DNS still resolves, so the subdomain exists and points at hosting that stopped serving
+pages. Anyone who clicked an ad got a browser security warning, and then an error page.</p>
+<p>The account's own data shows exactly when it happened:</p>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Spend</th>
+<th>Inquiries</th>
+<th>Avinode search events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>September 2025</td>
+<td>$2,600</td>
+<td>2</td>
+<td>281</td>
+</tr>
+<tr>
+<td>October 2025</td>
+<td>$2,696</td>
+<td>2</td>
+<td>135</td>
+</tr>
+<tr>
+<td><strong>November 2025</strong></td>
+<td><strong>$2,486</strong></td>
+<td><strong>1</strong></td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>December 2025</td>
+<td>$2,700</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr>
+<td>January 2026</td>
+<td>$2,679</td>
+<td><strong>0</strong></td>
+<td>28</td>
+</tr>
+<tr>
+<td>February 2026</td>
+<td>$2,354</td>
+<td><strong>0</strong></td>
+<td>10</td>
+</tr>
+<tr>
+<td>March 2026</td>
+<td>$1,913</td>
+<td><strong>0</strong></td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>$12,133 of spend from November onward produced 2 inquiries.</strong> Five months of paying for
+clicks that landed on an error.</p>
+<p>This is not a criticism of anyone. It is the single most common way a paid account quietly
+bleeds: nothing in Google Ads tells you the destination broke. It is also the reason the
+first item on our launch checklist is a weekly check that the page still loads.</p>
+<h3 id="what-it-changes-for-us-in-a-good-way">What it changes for us, in a good way</h3>
+<p><strong><code>lp.charterjetsinc.com</code> already exists and already belongs to you.</strong> It is exactly the
+subdomain we have been asking for to move the campaign landing page off our domain. We do
+not need to create anything: we point that subdomain at the new landing page.</p>
+<p>That closes the domain question in <a href="what-we-need.html">what we need</a>, and it is why GoDaddy
+access has moved to the top of that list.</p>
+<h2 id="the-tracking-in-this-account-is-sound-we-are-not-rebuilding-it">The tracking in this account is sound. We are not rebuilding it.</h2>
+<p>This is the big difference between the two accounts, and it is worth being explicit because
+our earlier documents assumed we would have to rebuild measurement from nothing.</p>
+<p>Of 33 conversion actions, only five ever fired:</p>
+<table>
+<thead>
+<tr>
+<th>Recorded</th>
+<th>Action</th>
+<th>Counted toward bidding</th>
+<th>In the Conversions column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,698</td>
+<td><code>Search One Way</code></td>
+<td>no</td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>2,535</td>
+<td><code>Search Round Trip</code></td>
+<td>no</td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td><strong>50</strong></td>
+<td><strong><code>Inquiry sent</code></strong>, valued at $200</td>
+<td><strong>yes</strong></td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Local actions - Website visits</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Calls from Smart Campaign Ads</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Avinode search events are correctly excluded from bidding and from the Conversions
+column.</strong> That is precisely the error that wasted the other account's budget, and it was not
+made here. The reported conversion count of 50 matches real inquiries exactly.</p>
+<p>Also already correct: geographic targeting is set to <strong>Presence</strong> on all four campaigns that
+spent, auto-tagging is on, the inquiry carries a <strong>$200</strong> value, and wasted spend on
+irrelevant search terms is <strong>4.6%</strong>, against 44% in the other account. The negative keyword
+work in this account was done properly.</p>
+<h3 id="what-still-needs-cleaning">What still needs cleaning</h3>
+<ul>
+<li><strong>33 conversion actions, most of them inherited clutter.</strong> Dead Universal Analytics goals,
+  two different GA4 properties, and three duplicates of the same inquiry action.</li>
+<li><strong>The <code>Default / Website</code> goal category is marked as biddable.</strong> It does no harm today
+  because the actions inside it are set to secondary. But if anyone ever flips one to
+  primary, bidding silently starts chasing search-widget clicks. We will unset it.</li>
+<li><strong>Two Google Tag Manager containers</strong> are live on the site. We need to confirm they are not
+  double counting.</li>
+<li><code>Local actions - Website visits</code> is marked primary. A website visit is not a conversion.</li>
+</ul>
+<h2 id="what-the-money-actually-bought">What the money actually bought</h2>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Spend</th>
+<th>Clicks</th>
+<th>Inquiries</th>
+<th>Geo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[Florida]</strong></td>
+<td><strong>$63,201</strong></td>
+<td>8,232</td>
+<td><strong>49</strong></td>
+<td>Presence</td>
+</tr>
+<tr>
+<td>[Rest US]</td>
+<td>$2,608</td>
+<td>1,228</td>
+<td><strong>0</strong></td>
+<td>Presence</td>
+</tr>
+<tr>
+<td>[California]</td>
+<td>$1,697</td>
+<td>483</td>
+<td>1</td>
+<td>Presence</td>
+</tr>
+<tr>
+<td>[Texas]</td>
+<td>$115</td>
+<td>57</td>
+<td>0</td>
+<td>Presence</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Florida took 93% of the spend and produced 49 of the 50 inquiries.</strong> That independently
+confirms the decision to launch concentrated rather than spread across four states, and it
+confirms Florida as the market to start in.</p>
+<p><strong>[Rest US] spent $2,608 across 1,228 clicks and produced nothing.</strong> That is what opening
+geography without a matching landing page looks like.</p>
+<h2 id="the-benchmarks-we-will-plan-with">The benchmarks we will plan with</h2>
+<p>Splitting the healthy period from the broken-landing-page period:</p>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Spend</th>
+<th>Clicks</th>
+<th>Cost per click</th>
+<th>Inquiries</th>
+<th>Click to inquiry</th>
+<th>Cost per inquiry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Healthy, Mar 2024 to Oct 2025</strong></td>
+<td>$52,498</td>
+<td>7,247</td>
+<td><strong>$7.24</strong></td>
+<td>48</td>
+<td><strong>0.66%</strong></td>
+<td><strong>$1,094</strong></td>
+</tr>
+<tr>
+<td>Broken, Nov 2025 onward</td>
+<td>$12,133</td>
+<td>1,193</td>
+<td>$10.17</td>
+<td>2</td>
+<td>0.17%</td>
+<td>$6,066</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The real benchmark for this business is a $7.24 cost per click, a 0.66% click to inquiry
+rate, and $1,094 per inquiry.</strong></p>
+<p>Our earlier modelling assumed a 3% to 5% click to lead rate. The measured reality is 0.66%.
+That is a six-fold difference and it changes the plan, which is worked through in
+<a href="unit-economics.html">unit economics</a>.</p>
+<p><strong>One important caveat.</strong> <code>Inquiry sent</code> only counts a request made inside the Avinode search
+widget. It does not count phone calls, and it does not count any other form. The true lead
+count was higher than 48. How much higher, nobody knows, and closing that gap is exactly what
+call tracking is for.</p>
+<h2 id="which-keywords-actually-produced">Which keywords actually produced</h2>
+<p>Of 86 keywords that received clicks, 16 ever converted. Two dominate:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Match</th>
+<th>Spend</th>
+<th>Clicks</th>
+<th>Inquiries</th>
+<th>Cost per inquiry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>private jet charter company</code></td>
+<td>Exact</td>
+<td>$19,796</td>
+<td>1,806</td>
+<td><strong>18</strong></td>
+<td>$1,100</td>
+</tr>
+<tr>
+<td><code>private jet charter service</code></td>
+<td>Exact</td>
+<td>$11,154</td>
+<td>1,467</td>
+<td><strong>13</strong></td>
+<td>$858</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Those two alone are 46% of spend and 62% of all conversions.</strong> Both carry a provider
+qualifier: <em>company</em>, <em>service</em>. That is someone looking for who to hire, not someone
+researching what a jet costs.</p>
+<h3 id="and-which-burned-money">And which burned money</h3>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Match</th>
+<th>Spend</th>
+<th>Inquiries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>private plane flights</code></td>
+<td>Phrase</td>
+<td>$5,509</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>private flight</code></td>
+<td>Phrase</td>
+<td>$5,170</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>best private jet charter</code></td>
+<td>Exact</td>
+<td>$1,803</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td><code>private jet rental</code></td>
+<td>Phrase</td>
+<td>$1,127</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-finding-that-changes-our-keyword-plan">The finding that changes our keyword plan</h3>
+<p>Grouped by search term theme:</p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Spend</th>
+<th>Clicks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contains "rent" or "rental"</td>
+<td><strong>$16,626</strong></td>
+<td>3,388</td>
+</tr>
+<tr>
+<td>Contains "charter company" or "charter service"</td>
+<td>$582</td>
+<td>61</td>
+</tr>
+</tbody>
+</table>
+<p>The search term <code>rent a private jet</code>, across its variants, took <strong>1,137 clicks and produced
+zero inquiries</strong>.</p>
+<p>We had built a full <code>Rental - Hire</code> ad group on the assumption that rental and charter intent
+were equivalent. <strong>The data says they are not.</strong> Rental brings cheaper clicks that do not
+buy. We are demoting that ad group and moving the budget to the charter company and charter
+service terms. The revised plan is in <a href="keywords.html">keywords</a>.</p>
+<h2 id="desktop-converts-three-times-better-than-mobile">Desktop converts three times better than mobile</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Clicks</th>
+<th>Spend</th>
+<th>Cost per click</th>
+<th>Inquiries</th>
+<th>Rate</th>
+<th>Cost per inquiry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Desktop</strong></td>
+<td>1,955</td>
+<td>$18,928</td>
+<td>$9.68</td>
+<td><strong>22</strong></td>
+<td><strong>1.13%</strong></td>
+<td><strong>$860</strong></td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>7,822</td>
+<td>$47,203</td>
+<td>$6.03</td>
+<td>27</td>
+<td>0.35%</td>
+<td>$1,748</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>223</td>
+<td>$1,490</td>
+<td>$6.68</td>
+<td>1</td>
+<td>0.45%</td>
+<td>$1,490</td>
+</tr>
+</tbody>
+</table>
+<p>Mobile took 70% of the spend and converted at a third of the rate. Cost per inquiry on
+desktop is half.</p>
+<p>It fits the product: a five figure decision gets made sitting down, not while waiting for a
+lift. It is also an immediate lever, so we will apply a positive desktop bid adjustment from
+day one rather than waiting three weeks to discover it.</p>
+<h2 id="the-phone-barely-rang">The phone barely rang</h2>
+<table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Call extension impressions</th>
+<th>Calls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Florida]</td>
+<td>7,478</td>
+<td><strong>8</strong></td>
+</tr>
+<tr>
+<td>Everything else</td>
+<td>80</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Eight calls from 7,478 call extension impressions.</strong> That is 0.1%.</p>
+<p>This matters because your game plan is built around the phone call from month 6 onward. On
+this evidence, the call from the ad was not a meaningful channel here.</p>
+<p>There are two possible explanations and we cannot tell them apart without measuring:</p>
+<ol>
+<li>This buyer does not call from the ad, they use the website. In which case the call-centric
+   half of the plan needs rethinking.</li>
+<li>Calls did happen, but <strong>from the website rather than from the ad</strong>, and were never
+   tracked. In which case the 0.66% inquiry rate understates real leads, and call tracking
+   matters even more than we said.</li>
+</ol>
+<p>Either way the answer is the same: instrument it before spending again.</p>
+<h2 id="what-we-are-doing-about-all-of-this">What we are doing about all of this</h2>
+<ol>
+<li><strong>We build in this account</strong>, not the other one. Sound tracking, clean quality score
+   history on the keywords that matter, and 50 real conversions to calibrate against.</li>
+<li><strong><code>lp.charterjetsinc.com</code> becomes the campaign landing page</strong>, pointed at the new page.</li>
+<li><strong>Florida first</strong>, now confirmed with your own spend rather than our reasoning.</li>
+<li><strong>Positive desktop bid adjustment from day one.</strong></li>
+<li><strong>Demote the rental ad group</strong>, fund charter company and charter service.</li>
+<li><strong>Clean up the 33 conversion actions</strong> and unset the <code>Default / Website</code> biddable category.</li>
+<li><strong>Call tracking before launch</strong>, because without it we cannot tell whether 0.66% is the
+   truth or just the part that was measured.</li>
+<li><strong>Recalibrate the economics</strong> against $1,094 per inquiry. See
+   <a href="unit-economics.html">unit economics</a>.</li>
+</ol></article>
+<footer>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 3, 2026</p>
+  <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
+</footer>
+</main>
+</body>
+</html>
