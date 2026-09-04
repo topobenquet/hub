@@ -81,3 +81,18 @@ footer .conf{font-size:.78rem;opacity:.8}
   .topbar ul{gap:14px}
   .topbar a{font-size:13px;padding:10px 0}
 }
+
+
+/* ---------- galería de videos de referencia ---------- */
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin:24px 0}
+.videos a{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--border,#e3e6ea);
+  border-radius:10px;overflow:hidden;background:var(--card,#fff);transition:transform .12s ease,box-shadow .12s ease}
+.videos a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.10)}
+.videos img{width:100%;aspect-ratio:9/14;object-fit:cover;display:block;background:#eee}
+.videos b{font-size:15px;padding:12px 14px 0}
+.videos .q{font-size:13.5px;padding:2px 14px 0;font-style:italic;color:var(--muted,#5b6572)}
+.videos span:not(.q){font-size:13px;padding:8px 14px 14px;line-height:1.45;color:var(--muted,#5b6572)}
+@media (prefers-color-scheme:dark){
+  .videos a{border-color:#2a3444;background:#151d29}
+  .videos a:hover{box-shadow:0 6px 18px rgba(0,0,0,.4)}
+}
