@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../style.css?v=6542f6f3">
 </head>
 <body>
-<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="account-history.html">Account History</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html" class="active">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
+<header class="topbar"><nav><a class="brand" href="index.html">Charter Jets Inc</a><ul><li><a href="index.html">Overview</a></li><li><a href="account-audit.html">Account Audit</a></li><li><a href="account-history.html">Account History</a></li><li><a href="unit-economics.html">Unit Economics</a></li><li><a href="market-research.html">Research</a></li><li><a href="game-plan-review.html">Game Plan</a></li><li><a href="your-feedback.html">Your Feedback</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="campaign-structure.html">Campaigns</a></li><li><a href="keywords.html">Keywords</a></li><li><a href="negative-keywords.html">Negatives</a></li><li><a href="ad-copy.html">Ad Copy</a></li><li><a href="landing-and-cro.html">Landing & CRO</a></li><li><a href="measurement.html" class="active">Measurement</a></li><li><a href="what-we-need.html">What We Need</a></li></ul></nav></header>
 <main>
 <article><h1 id="measurement-plan">Measurement Plan</h1>
 <h2 id="starting-point-there-is-nothing">Starting point: there is nothing</h2>
@@ -46,6 +46,11 @@ receive them:</p>
 <td>Primary form conversion</td>
 </tr>
 <tr>
+<td><code>call_click</code> (with <code>call_source</code>)</td>
+<td>Every phone link on the page</td>
+<td><strong>Phone intent</strong>, added 2026-09-04</td>
+</tr>
+<tr>
 <td><code>avinode_search_one_way</code> / <code>_round_trip</code> / <code>_multi_city</code></td>
 <td>Search widget</td>
 <td>The visitor searched</td>
@@ -72,6 +77,17 @@ receive them:</p>
 </tr>
 </tbody>
 </table>
+<p><code>call_click</code> carries a <code>call_source</code> of <code>nav</code>, <code>hero</code>, <code>sticky</code>, <code>cta</code> or <code>footer</code>, so we can
+see which placement actually drives calls rather than guessing. This was added because you
+asked for the call to be a primary conversion. It measures the click, not the conversation:
+turning it into a real conversion still needs a Google forwarding number, which is on the
+open items list.</p>
+<p><strong>A caution before we optimise towards calls.</strong> In <code>645-044-1013</code> the call extension recorded
+<strong>7,478 impressions and 8 calls</strong>, and desktop converts at 1.13% against 0.35% on mobile.
+Either calls were arriving through the website and were never measured, which is the most
+likely explanation, or the phone channel does not carry the weight it is assumed to. Thirty
+days of <code>call_click</code> data settles it, and it costs nothing to wait for that before we rebuild
+the page around the phone.</p>
 <p>One thing worth understanding about the search widget: it is a <strong>cross-origin iframe</strong> served
 by Avinode. Google Ads and GA4 cannot see inside it. The only telemetry we get from the
 search is the bridge the landing page builds from Avinode's own tracking events into the
@@ -278,7 +294,7 @@ their quality and their cost are different:</p>
 </tbody>
 </table></article>
 <footer>
-  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 3, 2026</p>
+  <p>Charter Jets Inc · prepared by Juan Benquet · last updated September 4, 2026</p>
   <p class="conf">Confidential. Prepared for Charter Jets Inc and not for redistribution.</p>
 </footer>
 </main>
