@@ -179,6 +179,67 @@ conversión y el costo por adquisición se evalúan con <strong>tres días de at
 Google como Meta siguen atribuyendo conversiones días después del cierre, y comparar el ayer
 contra datos maduros produce un derrumbe falso todas las mañanas.</p>
 <p>TikTok ya está cableado en los dos reportes. Muestra cero porque no hay inversión.</p>
+<h2 id="lo-que-se-destrabo-con-el-acceso-a-clientes">Lo que se destrabó con el acceso a clientes</h2>
+<p>Con <code>read_customers</code> concedido, aparece una capa que antes no se podía ver y que <strong>corrige
+una conclusión de este mismo documento</strong>.</p>
+<p>Agosto, por canal:</p>
+<table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Pedidos</th>
+<th>% recurrentes</th>
+<th>LTV medio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afiliados</td>
+<td>117</td>
+<td>68%</td>
+<td><strong>$1.113</strong></td>
+</tr>
+<tr>
+<td>Directo</td>
+<td>781</td>
+<td><strong>60%</strong></td>
+<td>$895</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>212</td>
+<td>67%</td>
+<td>$739</td>
+</tr>
+<tr>
+<td>Google</td>
+<td>714</td>
+<td>40%</td>
+<td>$404</td>
+</tr>
+<tr>
+<td><strong>Meta</strong></td>
+<td>189</td>
+<td><strong>31%</strong></td>
+<td>$348</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total del mes: 52% de los pedidos son de clientes que ya habían comprado.</strong></p>
+<p>Dos lecturas que cambian decisiones:</p>
+<p><strong>El "directo" no es principalmente UTM perdido.</strong> Este documento decía que ese 34% era en
+buena parte tráfico pago sin parámetros. Con 60% de recurrentes y un LTV de $895, se parece
+mucho más a clientes que ya conocen la marca y escriben la dirección. Sigue habiendo UTM
+perdido adentro, pero es menos de lo que suponíamos.</p>
+<p><strong>Meta es el canal de adquisición, no el de peor rendimiento.</strong> Su 1,53x de último click lo
+hace parecer el peor del mix. Pero <strong>el 69% de sus pedidos son de clientes nuevos</strong>, la
+proporción más alta de todos los canales. Google, en cambio, es 40% recurrente: buena parte
+de lo que se le atribuye son personas que ya conocían la marca y la buscaron.</p>
+<p>Juzgar a Meta con la misma vara de último click que a Google es compararlos midiendo cosas
+distintas. La medida correcta para un canal de adquisición es <strong>costo por cliente nuevo</strong>, no
+ROAS de último click.</p>
+<p>Queda pendiente lo mismo de siempre: sin <code>read_all_orders</code> esto solo se puede calcular sobre
+los últimos 60 días.</p>
 <h2 id="el-unico-numero-por-el-que-guiarse">El único número por el que guiarse</h2>
 <p>El ROAS por canal sirve para elegir entre campañas dentro de una plataforma. No sirve para
 decidir presupuesto entre plataformas, porque cada plataforma mide con una regla que fabricó
